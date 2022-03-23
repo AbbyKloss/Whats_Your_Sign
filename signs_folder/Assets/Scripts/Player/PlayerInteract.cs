@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerChat : MonoBehaviour
+public class PlayerInteract : MonoBehaviour
 {
 
     private Rigidbody2D RigidBody;
@@ -40,7 +40,7 @@ public class PlayerChat : MonoBehaviour
     {
         // paused = (canvas.GetComponent<PauseMenu>().pubPaused);
         closest = GetClosestNPC(NPCPoints);
-        chatting = GetComponent<PlayerController>().clicked;
+        chatting = GetComponent<PlayerController>().talkButton;
         if (!chatting) return;
 
         DistanceCheck();
@@ -87,6 +87,11 @@ public class PlayerChat : MonoBehaviour
         PlayerDistance = Vector3.Distance(transform.position, closest.position);
         if (PlayerDistance < chatDist)
             check = true;
+    }
+
+    public bool Give(Item item) {
+        if (closest == null) return false;
+        return closest.GetComponent<NPCTakeItem>().take(item);
     }
 
     void OnDrawGizmosSelected() {

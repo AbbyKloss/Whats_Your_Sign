@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventorySlot : MonoBehaviour
 {
-   Item item;
+   public Item item;
    public Image icon;
    [SerializeField] private int pos;
+   [SerializeField] private TextMeshProUGUI textbox;
 
    void Start() {
         updateItem();
@@ -13,8 +15,12 @@ public class InventorySlot : MonoBehaviour
    }
 
     public void updateItem() {
+        pos = pos % Inventory.instance.space;
+        ClearSlot();
         if (pos < Inventory.instance.items.Count)
             AddItem(Inventory.instance.items[pos]);
+        else item = null;
+        textbox.text = pos.ToString();
     }
 
     public void AddItem (Item newItem) {
@@ -40,19 +46,21 @@ public class InventorySlot : MonoBehaviour
 
     public void lRotate() {
        ClearSlot();
-       int nextpos = (pos + Inventory.instance.space + 1) % Inventory.instance.space;
+       int nextpos = (pos + Inventory.instance.space - 1) % Inventory.instance.space;
        if ((nextpos < Inventory.instance.items.Count) && (Inventory.instance.items[nextpos] != null)) {
            AddItem(Inventory.instance.items[nextpos]);
        }
        pos = nextpos;
+       textbox.text = pos.ToString();
     }
 
     public void rRotate() {
         ClearSlot();
-        int nextpos = (pos + Inventory.instance.space - 1) % Inventory.instance.space;
+        int nextpos = (pos + Inventory.instance.space + 1) % Inventory.instance.space;
         if ((nextpos < Inventory.instance.items.Count) && (Inventory.instance.items[nextpos] != null)) {
            AddItem(Inventory.instance.items[nextpos]);
         }
         pos = nextpos;
+        textbox.text = pos.ToString();
     }
 }

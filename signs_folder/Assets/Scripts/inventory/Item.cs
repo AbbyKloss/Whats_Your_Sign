@@ -10,7 +10,12 @@ public class Item : ScriptableObject
 
     public virtual void Use() {
         // use item
-
-        Debug.Log("Using " + name);
+        bool accepted = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerInteract>().Give(this);
+        if (accepted) {
+            Inventory.instance.Remove(this);
+            Debug.Log("Using " + name);
+        }
+        else
+            Debug.Log("Could not use " + name);
     }
 }

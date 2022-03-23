@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 
     float horizMov = 0f;
     float vertiMov = 0f;
-    public bool clicked = false;
+    public bool talkButton = false;
 
     // void Start()
     // {
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         horizMov = Input.GetAxisRaw("Horizontal") * horizSpeed;
         vertiMov = Input.GetAxisRaw("Vertical")   * vertiSpeed;
-        clicked  = Input.GetMouseButtonDown(0);
+        talkButton  = Input.GetKeyDown("e");
         // if (clicked) {
         //     // Debug.Log("Clicked! (" + Time.time + ")");
         // }

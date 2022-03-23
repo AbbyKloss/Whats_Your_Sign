@@ -9,7 +9,7 @@ public class NPCSpeaking : MonoBehaviour
     public TextAsset iFile;
     [SerializeField] private TextMeshPro textbox;
     [SerializeField] private string desiredline;
-    private int currentLine;
+    private int currentLine = 0;
 
 
     void Start()
@@ -18,19 +18,26 @@ public class NPCSpeaking : MonoBehaviour
         textbox.text = "";
     }
 
-    private List<string> initLines(TextAsset inputFile, string desiredLines="[s0]") {
+    private List<string> initLines(TextAsset inputFile, char lineType = 'l') {
         var retString = new List<string>();
         var arrayString = inputFile.text.Split('\n');
         string[] temp;
 
         foreach (var line in arrayString) {
             temp = line.Split('|');
+            foreach (string lin in temp)
+                Debug.Log(lin);
 
-            if (temp[0] == desiredLines)
+            if ((temp[0] == desiredline) && (temp[1][1] == lineType))
                 retString.Add(temp[2]);
         }
 
         return retString;
+    }
+
+    public void updateLines(char lineType) {
+        currentLine = 0;
+        lines = initLines(iFile, lineType);
     }
 
     public void readLine() {
