@@ -4,3 +4,14 @@
 [s0]|[l4]|final line
 [s0]|[t1]|thnak you!!!
 [s0]|[t2]|i gotted my talisman... the 1...
+[s0]|[d1]|no thnaks..
+
+[p0]|[s1]|Talking to myself again
+[p0]|[s1]|Wait until Cathy hears about this one
+[p0]|[d1]|I should get closer to who I'm giving this to
+[p0]|[d2]|Not sure the ground wants this talisman
+
+[b0]|[t1]|funny block
+[b0]|[t2]|silly cube
+[b0]|[t3]|humorous hexahedron
+[b0]|[t4]|there are only so many words for this

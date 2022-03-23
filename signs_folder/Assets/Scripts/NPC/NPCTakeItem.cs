@@ -8,8 +8,12 @@ public class NPCTakeItem : MonoBehaviour
     [SerializeField] private NPCSpeaking speaky;
     public bool take(Item item) {
         bool fulfilled = item.name == desiredItem;
-        if (fulfilled)
+        if (fulfilled) {
             speaky.updateLines('t');
+            speaky.loopingDialogue = false;
+        }
+        else
+            speaky.deny();
         return fulfilled;
     }
 }

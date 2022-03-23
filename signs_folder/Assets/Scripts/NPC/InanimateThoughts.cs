@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class NPCSpeaking : MonoBehaviour
+public class InanimateThoughts : MonoBehaviour
 {
     public List<string> lines;
     public TextAsset iFile;
-    [SerializeField] private TextMeshPro textbox;
-    [SerializeField] private string desiredline;
-    public bool loopingDialogue = true;
+    private string desiredline = "[b0]";
+    public bool loopingDialogue = false;
     private int currentLine = 0;
     private string denyLine;
+    private PlayerSpeaking playerSpeaker;
 
 
     void Start()
     {
+        playerSpeaker = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerSpeaking>();
         lines = initLines(iFile);
-        textbox.text = "";
     }
 
-    private List<string> initLines(TextAsset inputFile, char lineType = 'l') {
+    private List<string> initLines(TextAsset inputFile, char lineType = 't') {
         var retString = new List<string>();
         var arrayString = inputFile.text.Split('\n');
         string[] temp;
 
         foreach (var line in arrayString) {
             temp = line.Split('|');
-            // foreach (string lin in temp)
-            //     Debug.Log(lin);
+            foreach (string lin in temp)
+                Debug.Log(lin);
 
             if ((temp[0] == desiredline) && (temp[1][1] == lineType))
                 retString.Add(temp[2]);
@@ -46,8 +46,8 @@ public class NPCSpeaking : MonoBehaviour
     }
 
     public void readLine() {
-        textbox.text = lines[currentLine];
-        Debug.Log(lines[currentLine]);
+        playerSpeaker.customLine(lines[currentLine]);
+        // Debug.Log(lines[currentLine]);
         int temp = currentLine + 1;
         if (temp >= (lines.Count - 1)) {
             if (loopingDialogue)
@@ -56,17 +56,10 @@ public class NPCSpeaking : MonoBehaviour
                 currentLine = lines.Count - 1;
         }
         else currentLine = temp;
-        StartCoroutine(clearText());
     }
 
-    public void deny() {
-        textbox.text = denyLine;
-        StartCoroutine(clearText());
+    public bool take() {
+        return false;
     }
-
-    IEnumerator clearText() {
-		yield return new WaitForSeconds(3f);
-		textbox.text = "";
-	}
 }
 

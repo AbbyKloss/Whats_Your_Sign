@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class NPCSpeaking : MonoBehaviour
+public class PlayerSpeaking : MonoBehaviour
 {
-    public List<string> lines;
+    public List<string> selfLines;
+    public List<string> denyLines;
     public TextAsset iFile;
     [SerializeField] private TextMeshPro textbox;
-    [SerializeField] private string desiredline;
-    public bool loopingDialogue = true;
+    private string desiredline = "[p0]";
+
+    private int pastLine;
     private int currentLine = 0;
     private string denyLine;
 
 
     void Start()
     {
-        lines = initLines(iFile);
+        selfLines = initLines(iFile, 's');
+        denyLines = initLines(iFile, 'd');
         textbox.text = "";
     }
 
@@ -32,35 +35,43 @@ public class NPCSpeaking : MonoBehaviour
 
             if ((temp[0] == desiredline) && (temp[1][1] == lineType))
                 retString.Add(temp[2]);
-            else if ((temp[0] == desiredline) && (temp[1][1] == 'd'))
-                denyLine = temp[2];
         }
-
         return retString;
     }
 
     public void updateLines(char lineType) {
         currentLine = 0;
-        lines = initLines(iFile, lineType);
+        selfLines = initLines(iFile, lineType);
         readLine();
     }
 
     public void readLine() {
-        textbox.text = lines[currentLine];
-        Debug.Log(lines[currentLine]);
+        textbox.text = selfLines[currentLine];
+        Debug.Log(selfLines[currentLine]);
         int temp = currentLine + 1;
-        if (temp >= (lines.Count - 1)) {
-            if (loopingDialogue)
-                currentLine = (currentLine + lines.Count + 1) % lines.Count;
-            else
-                currentLine = lines.Count - 1;
+        if (temp >= (selfLines.Count - 1)) {
+            currentLine = (currentLine + selfLines.Count + 1) % selfLines.Count;
         }
         else currentLine = temp;
         StartCoroutine(clearText());
     }
 
     public void deny() {
-        textbox.text = denyLine;
+        int randInt = Random.Range(0, denyLines.Count);
+        textbox.text = denyLines[randInt];
+        StartCoroutine(clearText());
+    }
+
+    public void self() {
+        int randInt = Random.Range(0, selfLines.Count);
+        textbox.text = selfLines[randInt];
+        StartCoroutine(clearText());
+    }
+
+    // for thoughts around certain objects, probably
+    // we're thinking ahead, but not _too_ far ahead
+    public void customLine(string input) {
+        textbox.text = input;
         StartCoroutine(clearText());
     }
 
@@ -69,4 +80,3 @@ public class NPCSpeaking : MonoBehaviour
 		textbox.text = "";
 	}
 }
-

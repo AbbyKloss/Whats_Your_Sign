@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -8,16 +9,20 @@ public class PlayerInteract : MonoBehaviour
     private Rigidbody2D RigidBody;
     private Vector3 tempPos;
     private float CharDistance;
-
     private Vector3 PlayerPos;
     public float PlayerDistance;
-    public Transform closest;
+    public Transform closestTalk;
+    private GameObject[] NPCPoints;
+    public Transform closestBlock;
+    private GameObject[] ThinkPoints;
 
     private bool paused;
-    public bool check;
+    public bool talkCheck;
+    public bool thinkCheck;
     private bool chatting = false;
 
-    private GameObject[] NPCPoints;
+    [SerializeField] private TextMeshPro textbox;
+    private PlayerSpeaking selfSpeak;
 
     [SerializeField] private float chatDist = 10f;
 
@@ -28,7 +33,8 @@ public class PlayerInteract : MonoBehaviour
     void Start()
     {
         NPCPoints= GameObject.FindGameObjectsWithTag("Talkable");
-
+        ThinkPoints= GameObject.FindGameObjectsWithTag("Thinkable");
+        selfSpeak = GetComponent<PlayerSpeaking>();
         paused = false; // temp until i implement a pause menu
 
         // SoundGuy = GameObject.Find("SoundGuy");
@@ -39,30 +45,28 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         // paused = (canvas.GetComponent<PauseMenu>().pubPaused);
-        closest = GetClosestNPC(NPCPoints);
+        closestTalk = GetClosestNPC(NPCPoints);
+        closestBlock = GetClosestNPC(ThinkPoints);
         chatting = GetComponent<PlayerController>().talkButton;
-        if (!chatting) return;
 
-        DistanceCheck();
+        talkCheck = DistanceCheck(closestTalk);
+        thinkCheck = DistanceCheck(closestBlock);
 
-        
-        if (check && (!paused))
+        if (chatting && (!paused))
         {
-            // something that makes the NPCs cycle through text lines
-            // Debug.Log("Attempting to chat...");
-            closest.GetComponent<NPCSpeaking>().readLine();
+            if (talkCheck) {
+                // something that makes the NPCs cycle through text lines
+                // Debug.Log("Attempting to chat...");
+                closestTalk.GetComponent<NPCSpeaking>().readLine();
+            }
+            else if (thinkCheck) {
+                closestBlock.GetComponent<InanimateThoughts>().readLine();
+            }
+            else {
+            selfSpeak.self();
+            }
         }
-
-        // DrawLine();
     }
-
-    // private void DrawLine()
-    // {
-    //     bool facingRight = GetComponent<PlayerMovement>().m_FacingRight;
-    //     Vector3 temp = transform.position + new Vector3((facingRight ? 1 : -1) * xOffset, yOffset);
-    //     lineRenderer.SetPosition(0, temp);
-    //     lineRenderer.SetPosition(1, distanceJoint.connectedAnchor);
-    // }
 
     Transform GetClosestNPC(GameObject[] NPCPoints)
     {
@@ -81,23 +85,27 @@ public class PlayerInteract : MonoBehaviour
         return closest;
     }
 
-    private void DistanceCheck()
+    private bool DistanceCheck(Transform closestObj)
     {
-        check = false;
-        PlayerDistance = Vector3.Distance(transform.position, closest.position);
+        bool tempcheck = false;
+        PlayerDistance = Vector3.Distance(transform.position, closestObj.position);
         if (PlayerDistance < chatDist)
-            check = true;
+            tempcheck = true;
+        return tempcheck;
     }
 
     public bool Give(Item item) {
-        if (closest == null) return false;
-        return closest.GetComponent<NPCTakeItem>().take(item);
+        if (closestTalk == null) return false;
+        else if (!talkCheck) {
+            selfSpeak.deny();
+            return false;
+        }
+        return closestTalk.GetComponent<NPCTakeItem>().take(item);
     }
 
     void OnDrawGizmosSelected() {
-        if (closest == null) return;
-        Gizmos.DrawWireSphere(closest.position, chatDist * 0.85f);
-        // Gizmos.DrawWireSphere(closest.position, messing/2);
-        // Gizmos.DrawWireSphere(RigidBody.position, messing/2);
+        if ((closestTalk == null) || (closestBlock == null)) return;
+        Gizmos.DrawWireSphere(closestTalk.position, chatDist * 0.85f);
+        Gizmos.DrawWireSphere(closestBlock.position, chatDist * 0.85f);
     }
 }

@@ -6,6 +6,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
+	[SerializeField] private GameObject textbox;
 
 	private Rigidbody2D m_Rigidbody2D;
 	public bool m_FacingRight = true;  // For determining which way the player is currently facing.
@@ -52,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+		theScale.x = theScale.x;
+		textbox.transform.localScale = theScale;
 	}
 }
 	
