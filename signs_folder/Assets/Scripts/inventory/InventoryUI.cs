@@ -31,4 +31,16 @@ public class InventoryUI : MonoBehaviour
             }
         }
     }
+
+    public void imposeLRotate() {
+        foreach (InventorySlot slot in slots) {
+            slot.lRotate();
+        }
+    }
+
+    public void imposeRRotate() {
+        foreach (InventorySlot slot in slots) {
+            slot.rRotate();
+        }
+    }
 }

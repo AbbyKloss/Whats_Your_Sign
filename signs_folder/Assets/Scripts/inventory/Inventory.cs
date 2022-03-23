@@ -22,6 +22,11 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
 
+    void Start() {
+        // items = new List<Item>(space);
+        Debug.Log("List size: " + items.Count);
+    }
+
     public bool Add (Item item) {
         if (items.Count >= space) {
             Debug.Log("Not enough room");

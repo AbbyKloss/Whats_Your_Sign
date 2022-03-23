@@ -317,7 +317,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 106447305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1082301976}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: imposeRRotate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &106447307
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -508,9 +520,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: babb14de1071dd24eb172aaa95d91a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  space: 7
+  space: 12
   items:
-  - {fileID: 11400000, guid: 5b1d3762f90114e45899d4f536e5fcce, type: 2}
+  - {fileID: 11400000, guid: 2676f3f0ab3c6bb4a9ec1a72fe413728, type: 2}
+  - {fileID: 11400000, guid: b00f25a52c836ca47b06730327bf668f, type: 2}
+  - {fileID: 11400000, guid: 5d579de5099b9b24ca70624594635354, type: 2}
+  - {fileID: 11400000, guid: 3cfe4d19a4a2e95479776e3cf27def67, type: 2}
+  - {fileID: 11400000, guid: 6ebe8c6bde02d2e4c8c8c39839d1d996, type: 2}
+  - {fileID: 11400000, guid: e6d404403745ff1458cffd9374f9d3b2, type: 2}
+  - {fileID: 11400000, guid: 0e2f2bed6f8e17b4c84325f446d181c7, type: 2}
+  - {fileID: 11400000, guid: 3c51f1737f0ee1341922cd969f354585, type: 2}
+  - {fileID: 11400000, guid: d655721dff8fdbb498d7d3bf7061606f, type: 2}
+  - {fileID: 11400000, guid: 934a80c1dcd8de14999d96beafa2364a, type: 2}
+  - {fileID: 11400000, guid: 8dfe183e9ac455640a7bc661eb1a974b, type: 2}
+  - {fileID: 11400000, guid: d4dddcf95d17cf647aa6ec182bb6c58b, type: 2}
 --- !u!1 &213697574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,7 +2482,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1948980347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1082301976}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: imposeLRotate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1948980349
 CanvasRenderer:
   m_ObjectHideFlags: 0
