@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Talkable
   - InvSlot
+  - Thinkable
   layers:
   - Default
   - TransparentFX

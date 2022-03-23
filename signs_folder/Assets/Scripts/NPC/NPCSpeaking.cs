@@ -56,12 +56,16 @@ public class NPCSpeaking : MonoBehaviour
                 currentLine = lines.Count - 1;
         }
         else currentLine = temp;
-        StartCoroutine(clearText());
+        // StartCoroutine(clearText());
     }
 
     public void deny() {
         textbox.text = denyLine;
         StartCoroutine(clearText());
+    }
+
+    public void clearBox() {
+        textbox.text = "";
     }
 
     IEnumerator clearText() {

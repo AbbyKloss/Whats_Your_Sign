@@ -18,7 +18,9 @@ public class PlayerInteract : MonoBehaviour
 
     private bool paused;
     public bool talkCheck;
+    public bool pastTalkCheck;
     public bool thinkCheck;
+    public bool pastThinkCheck;
     private bool chatting = false;
 
     [SerializeField] private TextMeshPro textbox;
@@ -49,6 +51,9 @@ public class PlayerInteract : MonoBehaviour
         closestBlock = GetClosestNPC(ThinkPoints);
         chatting = GetComponent<PlayerController>().talkButton;
 
+        pastTalkCheck = talkCheck;
+        pastThinkCheck = thinkCheck;
+
         talkCheck = DistanceCheck(closestTalk);
         thinkCheck = DistanceCheck(closestBlock);
 
@@ -66,6 +71,14 @@ public class PlayerInteract : MonoBehaviour
             selfSpeak.self();
             }
         }
+        if (pastTalkCheck && (pastTalkCheck != talkCheck) && !paused) {
+            selfSpeak.clearBox();
+            closestTalk.GetComponent<NPCSpeaking>().clearBox();
+        }
+        if (pastThinkCheck && (pastThinkCheck != thinkCheck) && !paused) {
+            selfSpeak.clearBox();
+        }
+
     }
 
     Transform GetClosestNPC(GameObject[] NPCPoints)

@@ -53,7 +53,7 @@ public class PlayerSpeaking : MonoBehaviour
             currentLine = (currentLine + selfLines.Count + 1) % selfLines.Count;
         }
         else currentLine = temp;
-        StartCoroutine(clearText());
+        // StartCoroutine(clearText());
     }
 
     public void deny() {
@@ -72,7 +72,11 @@ public class PlayerSpeaking : MonoBehaviour
     // we're thinking ahead, but not _too_ far ahead
     public void customLine(string input) {
         textbox.text = input;
-        StartCoroutine(clearText());
+        // StartCoroutine(clearText());
+    }
+
+    public void clearBox() {
+        textbox.text = "";
     }
 
     IEnumerator clearText() {
