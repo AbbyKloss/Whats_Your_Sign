@@ -47,7 +47,7 @@ public class PlayerSpeaking : MonoBehaviour
 
     public void readLine() {
         textbox.text = selfLines[currentLine];
-        Debug.Log(selfLines[currentLine]);
+        // Debug.Log(selfLines[currentLine]);
         int temp = currentLine + 1;
         if (temp >= (selfLines.Count - 1)) {
             currentLine = (currentLine + selfLines.Count + 1) % selfLines.Count;
@@ -72,6 +72,7 @@ public class PlayerSpeaking : MonoBehaviour
     // we're thinking ahead, but not _too_ far ahead
     public void customLine(string input) {
         textbox.text = input;
+        Debug.Log("Speaking: " + input);
         // StartCoroutine(clearText());
     }
 

@@ -27,8 +27,8 @@ public class InanimateThoughts : MonoBehaviour
 
         foreach (var line in arrayString) {
             temp = line.Split('|');
-            foreach (string lin in temp)
-                Debug.Log(lin);
+            // foreach (string lin in temp)
+                // Debug.Log(lin);
 
             if ((temp[0] == desiredline) && (temp[1][1] == lineType))
                 retString.Add(temp[2]);
@@ -49,13 +49,18 @@ public class InanimateThoughts : MonoBehaviour
         playerSpeaker.customLine(lines[currentLine]);
         // Debug.Log(lines[currentLine]);
         int temp = currentLine + 1;
-        if (temp >= (lines.Count - 1)) {
+        if (temp > lines.Count) {
             if (loopingDialogue)
                 currentLine = (currentLine + lines.Count + 1) % lines.Count;
             else
                 currentLine = lines.Count - 1;
         }
         else currentLine = temp;
+        Debug.Log("currentLine changed" + currentLine);
+    }
+
+    public void resetCounter() {
+        currentLine = 0;
     }
 
     public bool take() {

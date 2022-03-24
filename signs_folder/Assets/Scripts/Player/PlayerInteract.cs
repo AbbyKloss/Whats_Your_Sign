@@ -51,6 +51,10 @@ public class PlayerInteract : MonoBehaviour
         closestBlock = GetClosestNPC(ThinkPoints);
         chatting = GetComponent<PlayerController>().talkButton;
 
+        if (chatting) {
+            Debug.Log("Chatting with 'E'");
+        }
+
         pastTalkCheck = talkCheck;
         pastThinkCheck = thinkCheck;
 
@@ -77,6 +81,7 @@ public class PlayerInteract : MonoBehaviour
         }
         if (pastThinkCheck && (pastThinkCheck != thinkCheck) && !paused) {
             selfSpeak.clearBox();
+            closestBlock.GetComponent<InanimateThoughts>().resetCounter();
         }
 
     }

@@ -13,7 +13,7 @@ public class NPCTakeItem : MonoBehaviour
             speaky.loopingDialogue = false;
         }
         else
-            speaky.deny();
+            speaky.deny(item.name);
         return fulfilled;
     }
 }

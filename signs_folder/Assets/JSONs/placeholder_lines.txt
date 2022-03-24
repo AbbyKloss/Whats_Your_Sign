@@ -1,17 +1,35 @@
-[s0]|[l1]|line 1
-[s0]|[l2]|line 2
-[s0]|[l3]|amogus sus
-[s0]|[l4]|final line
-[s0]|[t1]|thnak you!!!
-[s0]|[t2]|i gotted my talisman... the 1...
-[s0]|[d1]|no thnaks..
+# format: character script tag | line type, speaker, number | line string
+# s = npc [S]peaker
+# p = [P]layer
+# b = thoughts (came from [B]lock)
+# n = [N]pc
 
-[p0]|[s1]|Talking to myself again
-[p0]|[s1]|Wait until Cathy hears about this one
-[p0]|[d1]|I should get closer to who I'm giving this to
-[p0]|[d2]|Not sure the ground wants this talisman
+[s0]|[ln1]|line 1
+[s0]|[ln2]|line 2
+[s0]|[lp3]|amogus sus
+[s0]|[ln4]|final line
+[s0]|[tn1]|thnak you!!!
+[s0]|[tn2]|i gotted my talisman... the 1...
+[s0]|[dn1]|no thnaks..
+[s0]|[dn2]|HATE VIRGIN
 
-[b0]|[t1]|funny block
-[b0]|[t2]|silly cube
-[b0]|[t3]|humorous hexahedron
-[b0]|[t4]|there are only so many words for this
+[p0]|[sp1]|Talking to myself again
+[p0]|[sp1]|Wait until Cathy hears about this one
+[p0]|[dp1]|I should get closer to who I'm giving this to
+[p0]|[dp2]|Not sure the ground wants this talisman
+
+[b0]|[tp1]|funny block
+[b0]|[tp2]|silly cube
+[b0]|[tp3]|humorous hexahedron
+[b0]|[tp4]|there are only so many words for this
+
+[s1]|[ln1]|business
+[s1]|[lp2]|business
+[s1]|[ln3]|business business
+[s1]|[lp4]|business business
+[s1]|[lp5]|(i hope this is a productive conversation)
+[s1]|[ln6]|ahhahahah my work/life balance is terrible
+[s1]|[tn1]|my wife'll be so happy..
+[s1]|[tn2]|my marriage is saved..
+[s1]|[dn1]|idk about that one
+[s1]|[dn2]|i'm not maidenless, i have a wife
