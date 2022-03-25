@@ -4,6 +4,24 @@
 # b = thoughts (came from [B]lock)
 # n = [N]pc
 
+# NPC Table (all designators start with s)
+# Name        | designator index
+# ____________|_________________
+# Placeholder | 0
+# 1 shirt     | 1
+# Cardigan    | 2
+# Beanie      | 3
+# Greaser     | 4
+# Ned Flames  | 5
+# Business    | 6
+#             | 7
+# Lt. Surge   | 8
+#             | 9
+#             | 10
+# Tom Scott   | 11
+# Hokusai     | 12
+
+
 [s0]|[ln1]|line 1
 [s0]|[ln2]|line 2
 [s0]|[lp3]|amogus sus
@@ -23,13 +41,13 @@
 [b0]|[tp3]|humorous hexahedron
 [b0]|[tp4]|there are only so many words for this
 
-[s1]|[ln1]|business
-[s1]|[lp2]|business
-[s1]|[ln3]|business business
-[s1]|[lp4]|business business
-[s1]|[lp5]|(i hope this is a productive conversation)
-[s1]|[ln6]|ahhahahah my work/life balance is terrible
-[s1]|[tn1]|my wife'll be so happy..
-[s1]|[tn2]|my marriage is saved..
-[s1]|[dn1]|idk about that one
-[s1]|[dn2]|i'm not maidenless, i have a wife
+[s6]|[ln1]|business
+[s6]|[lp2]|business
+[s6]|[ln3]|business business
+[s6]|[lp4]|business business
+[s6]|[lp5]|(i hope this is a productive conversation)
+[s6]|[ln6]|ahhahahah my work/life balance is terrible
+[s6]|[tn1]|my wife'll be so happy..
+[s6]|[tn2]|my marriage is saved..
+[s6]|[dn1]|idk about that one
+[s6]|[dn2]|i'm not maidenless, i have a wife

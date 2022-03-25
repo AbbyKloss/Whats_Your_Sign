@@ -28,6 +28,8 @@ public class PlayerInteract : MonoBehaviour
 
     [SerializeField] private float chatDist = 10f;
 
+    public int numGiven = 0;
+
     // public GameObject SoundGuy;
     // public audio AC;
 
@@ -118,7 +120,10 @@ public class PlayerInteract : MonoBehaviour
             selfSpeak.deny();
             return false;
         }
-        return closestTalk.GetComponent<NPCTakeItem>().take(item);
+        bool fulfilled = closestTalk.GetComponent<NPCTakeItem>().take(item);
+        if (fulfilled)
+            numGiven++;
+        return fulfilled;
     }
 
     void OnDrawGizmosSelected() {

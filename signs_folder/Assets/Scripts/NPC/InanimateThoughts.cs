@@ -26,6 +26,8 @@ public class InanimateThoughts : MonoBehaviour
         string[] temp;
 
         foreach (var line in arrayString) {
+            if (line.Length <= 0) continue;
+            else if (line[0] == '#') continue;
             temp = line.Split('|');
             // foreach (string lin in temp)
                 // Debug.Log(lin);

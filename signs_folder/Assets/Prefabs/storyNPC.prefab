@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5373883755348174593}
   - component: {fileID: 2366245210345158207}
   m_Layer: 0
-  m_Name: NPC (Base)
+  m_Name: storyNPC
   m_TagString: Talkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1203566345
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101,6 +101,8 @@ MonoBehaviour:
   iFile: {fileID: 4900000, guid: 97ff114666227074985c9accdefc1cb2, type: 3}
   textbox: {fileID: 5373883756657547775}
   desiredline: '[s0]'
+  loopingDialogue: 1
+  specialDeny: 
 --- !u!114 &2366245210345158207
 MonoBehaviour:
   m_ObjectHideFlags: 0
