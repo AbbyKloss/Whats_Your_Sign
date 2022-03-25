@@ -17,6 +17,9 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float yBottomLimit = 0.0f;
     [SerializeField] private float xLeftLimit = 0.0f;
     [SerializeField] private float xRightLimit = 0.0f;
+    private float xVal = 0.0f;
+    private float yVal = 0.0f;
+    private int mode = 0;
 
     void Start() {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -24,12 +27,20 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate() {
         Vector3 temp = transform.position;
+        
+        if (mode == 0)
+            temp = modeZero();
+        else if (mode == 1)
+            temp = modeOne();
+        transform.position = temp;
+    }
+
+    Vector3 modeZero() {
+        Vector3 temp = transform.position;
         bool leftTest   = playerTransform.position.x > xLeftLimit;
         bool rightTest  = playerTransform.position.x < xRightLimit;
         bool topTest    = playerTransform.position.y < yTopLimit;
         bool bottomTest = playerTransform.position.y > yBottomLimit;
-
-        
 
         if (FollowX) {
             // if (System.Math.Abs(playerTransform.position.x) > System.Math.Abs(temp.x) + XPadding) {
@@ -55,7 +66,25 @@ public class CameraFollow : MonoBehaviour
                 temp.y += YOffset;
             }
         }
+        return temp;
+    }
 
-        transform.position = temp;
+    private Vector3 modeOne() {
+        Vector3 temp = transform.position;
+        temp.y = yVal;
+        temp.x = xVal;
+        return temp;
+    }
+
+    public void toModeZero() {
+        xVal = 0.0f;
+        yVal = 0.0f;
+        mode = 0;
+    }
+
+    public void toModeOne(float xValIn, float yValIn) {
+        xVal = xValIn;
+        yVal = yValIn;
+        mode = 1;
     }
 }

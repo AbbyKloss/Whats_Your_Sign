@@ -5,11 +5,6 @@ using TMPro;
 
 public class PlayerInteract : MonoBehaviour
 {
-
-    private Rigidbody2D RigidBody;
-    private Vector3 tempPos;
-    private float CharDistance;
-    private Vector3 PlayerPos;
     public float PlayerDistance;
     public Transform closestTalk;
     private GameObject[] NPCPoints;
