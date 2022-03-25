@@ -10,16 +10,18 @@
 # Placeholder | 0
 # 1 shirt     | 1
 # Cardigan    | 2
-# Beanie      | 3
-# Greaser     | 4
-# Ned Flames  | 5
+# cat boy     | 3
+# Tortellini  | 4
+# Dan Flashes | 5
 # Business    | 6
-#             | 7
+# Attendant   | 7
 # Lt. Surge   | 8
-#             | 9
-#             | 10
+# Dr. Cox     | 9
+# Prom Queen  | 10
 # Tom Scott   | 11
 # Hokusai     | 12
+# Store Clerk | 13
+# Office Sec. | 14
 
 
 [s0]|[ln1]|line 1
@@ -41,13 +43,38 @@
 [b0]|[tp3]|humorous hexahedron
 [b0]|[tp4]|there are only so many words for this
 
-[s4]|[ln1]|hey kid
-[s4]|[lp2]|hey there
-[s4]|[ln2]|...
-[s4]|[tn1]|oh uh, thanks.
-[s4]|[tn2]|i uh. i needed this.
-[s4]|[dn1]|i. dont need that one.
-[s4]|[dn2]|get it out my face
+
+
+[s3]|[ln1]|im picking up cat food
+[s3]|[ln2]|because my cat ran away
+[s3]|[ln3]|he's done this before, but he came back for his favorite food
+[s3]|[ln4]|but they're out of his favorite food today
+[s3]|[tn1]|oh! there's the cat food!
+[s3]|[tn2]|i'll keep the card though
+[s3]|[tn3]|my cat thanks you
+[s3]|[dn1]|that won't help me find him
+[s3]|[dn2]|i think that will pulverize my cat
+
+[s4]|[ln1]|hey CHUMP
+[s4]|[ln2]|my name's Tortellini, the leader of the Tunnel Snakes
+[s4]|[ln3]|and BOY im peckish
+[s4]|[ln4]|but i can't decide what i wanna eat
+[s4]|[tn1]|you're right
+[s4]|[tn2]|i AM standing right next to a seafood joint
+[s4]|[dn1]|not feeling like eating THAT one
+[s4]|[dn2]|dont remind me of my enemy gang, the SCORPIONS
+
+[s5]|[ln1]|DAN FLASHES HAD A SALE YESTERDAY
+[s5]|[ln2]|BUT THE CRAB SHIRT I WAS EYEING GOT STOLEN
+[s5]|[ln3]|THIS ONE WAS $350 BECAUSE OF THE PATTERNS
+[s5]|[ln4]|BUT IT GOT SOLD OUT SO I'LL NEVER SEE IT AGAIN
+[s5]|[ln5]|YOU GOTTA HELP ME GET ONE
+[s5]|[tn1]|YOU'RE FUCKING RIGHT
+[s5]|[tn2]|THEY CAN JUST MAKE ANOTHER CRAB SHIRT
+[s5]|[tn3]|DAN FLASHES CAN JUST USE THE SAME IDEAS
+[s5]|[tn4]|BECAUSE THEY'RE GENIUSES AND WONT MESS IT UP
+[s5]|[dn1]|dan flashes would NEVER make that a shirt
+[s5]|[dn2]|A FISH ISN'T A CRAB YOU DOLT
 
 [s6]|[ln1]|business
 [s6]|[lp2]|business
@@ -59,3 +86,53 @@
 [s6]|[tn2]|my marriage is saved..
 [s6]|[dn1]|idk about that one
 [s6]|[dn2]|i'm not maidenless, i have a wife
+
+[s7]|[ln1]|hey.
+[s7]|[ln2]|care to lend an ear to my woes?
+[s7]|[ln3]|i have a flight tonight but i just can't go
+[s7]|[ln4]|those customers. oh god they have so much rage
+[s7]|[ln5]|i think god's grace has left me
+[s7]|[tn1]|you're right
+[s7]|[tn2]|i must use the goat to contact the true lord
+[s7]|[dn1]|that will not bring me salvation
+[s7]|[dn2]|a water landing will just make my night worse
+
+[s8]|[ln1]|I RUN RAM RANCH
+[s8]|[ln2]|RAM RANCH REALLY ROCKS!!!!!
+[s8]|[ln3]|but they're becoming a problem
+[s8]|[ln4]|they're all turning into goats
+[s8]|[ln5]|please help.
+[s8]|[tn1]|YOUVE SAVED RAM RANCH!!!!
+[s8]|[tn2]|I JUST NEEDED MORE RAMS!!!!!!
+[s8]|[dn1]|no.
+[s8]|[dn2]|RAMS AND GOATS ARE DIFFERENT THINGS
+
+[s9]|[ln1]|one of my patients got stung by something
+[s9]|[ln2]|it's really hard to tell what, though
+[s9]|[ln3]|you know what, i'll ask you
+[s9]|[ln4]|you have any ideas what it could be?
+[s9]|[tn1]|...a scorpion?
+[s9]|[tn2]|you've actually been helpful, thank you
+[s9]|[dn1]|that's the dumbest idea i've ever heard
+[s9]|[dn2]|i see cancer on the daily, i'd know that one
+
+[s10]|[ln1]|oh, hi there
+[s10]|[lp2]|hey, something got you down?
+[s10]|[ln3]|it's nothing, really
+[s10]|[ln4]|prom's just tonight and i still don't even have a date
+[s10]|[ln5]|never mind my dreams of becoming prom queen
+[s10]|[lp6]|alright, just wait right there...
+[s10]|[lp7]|...and i might have something for you
+[s10]|[tn1]|oh, this looks like just the thing!
+[s10]|[tn2]|this is sure to make me belle of the ball!
+[s10]|[dn1]|idk if that'll do anything for me
+[s10]|[dn2]|...are you saying i should lose weight?
+
+[s11]|[ln1]|Hello there!
+[s11]|[ln2]|I run a travel blog, but I've got a problem.
+[s11]|[ln3]|I've run out of locations to talk about.
+[s11]|[ln4]|Is there any place around here you could point me to?
+[s11]|[tn1]|This is amazing.
+[s11]|[tn2]|You have truly saved my livlihood.
+[s11]|[dn1]|Not that one.
+[s11]|[dn2]|No, I went to a zoo yesterday
