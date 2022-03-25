@@ -7,10 +7,12 @@ public class InventorySlot : MonoBehaviour
    public Item item;
    public Image icon;
    [SerializeField] private int pos;
-   [SerializeField] private TextMeshProUGUI textbox;
+   [SerializeField] private TextMeshProUGUI slotIterator;
+   [SerializeField] private TextMeshProUGUI itemDescriptor;
 
    void Start() {
         updateItem();
+        ClearDescriptor();
         // Debug.Log("pos: " + pos + "\n(pos - 1 + 7) % 7: " + (pos - 1 + 7) % 7);
    }
 
@@ -20,7 +22,7 @@ public class InventorySlot : MonoBehaviour
         if (pos < Inventory.instance.items.Count)
             AddItem(Inventory.instance.items[pos]);
         else item = null;
-        textbox.text = pos.ToString();
+        slotIterator.text = (pos + 1).ToString();
     }
 
     public void AddItem (Item newItem) {
@@ -51,7 +53,7 @@ public class InventorySlot : MonoBehaviour
            AddItem(Inventory.instance.items[nextpos]);
        }
        pos = nextpos;
-       textbox.text = pos.ToString();
+       slotIterator.text = (pos + 1).ToString();
     }
 
     public void rRotate() {
@@ -61,6 +63,58 @@ public class InventorySlot : MonoBehaviour
            AddItem(Inventory.instance.items[nextpos]);
         }
         pos = nextpos;
-        textbox.text = pos.ToString();
+        slotIterator.text = (pos + 1).ToString();
     }
+
+   public void updateDescriptor() {
+      string temp = "";
+      switch (item.name) {
+         case "Talisman1":
+            temp = "Nameof\nTalisman\n(The Water-bearer)";
+            goto default;
+         case "AriesTalisman":
+            temp = "Aries\nTalisman\n(The Ram)";
+            goto default;
+         case "TaurusTalisman":
+            temp = "Taurus\nTalisman\n(The Bull)";
+            goto default;
+         case "GeminiTalisman":
+            temp = "Gemini\nTalisman\n(The Twins)";
+            goto default;
+         case "CancerTalisman":
+            temp = "Cancer\nTalisman\n(The Crab)";
+            goto default;
+         case "LeoTalisman":
+            temp = "Leo\nTalisman\n(The Lion)";
+            goto default;
+         case "VirgoTalisman":
+            temp = "Virgo\nTalisman\n(The Maiden)";
+            goto default;
+         case "LibraTalisman":
+            temp = "Libra\nTalisman\n(The Scales)";
+            goto default;
+         case "ScorpioTalisman":
+            temp = "Scorpio\nTalisman\n(The Scorpion)";
+            goto default;
+         case "SaggitariusTalisman":
+            temp = "Saggitarius\nTalisman\n(The Archer)";
+            goto default;
+         case "CapricornTalisman":
+            temp = "Capricorn\nTalisman\n(The Goat)";
+            goto default;
+         case "AquariusTalisman":
+            temp = "Aquarius\nTalisman\n(The Water-bearer)";
+            goto default;
+         case "PiscesTalisman":
+            temp = "Pisces\nTalisman\n(The Fish)";
+            goto default;
+         default:
+            itemDescriptor.text = temp;
+            break;
+      }
+   }
+
+   public void ClearDescriptor() {
+      itemDescriptor.text = "";
+   }
 }
