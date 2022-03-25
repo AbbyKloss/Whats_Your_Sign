@@ -41,6 +41,14 @@
 [b0]|[tp3]|humorous hexahedron
 [b0]|[tp4]|there are only so many words for this
 
+[s4]|[ln1]|hey kid
+[s4]|[lp2]|hey there
+[s4]|[ln2]|...
+[s4]|[tn1]|oh uh, thanks.
+[s4]|[tn2]|i uh. i needed this.
+[s4]|[dn1]|i. dont need that one.
+[s4]|[dn2]|get it out my face
+
 [s6]|[ln1]|business
 [s6]|[lp2]|business
 [s6]|[ln3]|business business
