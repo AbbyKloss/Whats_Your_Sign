@@ -8,8 +8,8 @@
 # Name        | designator index
 # ____________|_________________
 # Placeholder | 0
-# 1 shirt     | 1
-# Cardigan    | 2
+# Streamer    | 1
+# Karengan    | 2
 # cat boy     | 3
 # Tortellini  | 4
 # Dan Flashes | 5
@@ -24,6 +24,7 @@
 # Office Sec. | 14
 
 
+# Placeholder
 [s0]|[ln1]|line 1
 [s0]|[ln2]|line 2
 [s0]|[lp3]|amogus sus
@@ -43,7 +44,19 @@
 [b0]|[tp3]|humorous hexahedron
 [b0]|[tp4]|there are only so many words for this
 
+# Placeholder
+[s1]|[ln1]|let'splay
+[s1]|[tn1]|you tube
+[s1]|[tn2]|funfunfun
+[s1]|[dn1]|gungungun
+[s1]|[dn2]|i hate being killed by 12 year olds in games
 
+# Placeholder
+[s2]|[ln1]|gungungun
+[s2]|[tn1]|gungungun
+[s2]|[tn2]|funfunfun
+[s1]|[dn1]|gungungun
+[s2]|[dn2]|IM NOT ANGRY YOU"RE AGNREY
 
 [s3]|[ln1]|im picking up cat food
 [s3]|[ln2]|because my cat ran away
@@ -69,7 +82,7 @@
 [s5]|[ln3]|THIS ONE WAS $350 BECAUSE OF THE PATTERNS
 [s5]|[ln4]|BUT IT GOT SOLD OUT SO I'LL NEVER SEE IT AGAIN
 [s5]|[ln5]|YOU GOTTA HELP ME GET ONE
-[s5]|[tn1]|YOU'RE FUCKING RIGHT
+[s5]|[tn1]|YOU'RE ABSOLUTELY RIGHT
 [s5]|[tn2]|THEY CAN JUST MAKE ANOTHER CRAB SHIRT
 [s5]|[tn3]|DAN FLASHES CAN JUST USE THE SAME IDEAS
 [s5]|[tn4]|BECAUSE THEY'RE GENIUSES AND WONT MESS IT UP
@@ -132,7 +145,17 @@
 [s11]|[ln2]|I run a travel blog, but I've got a problem.
 [s11]|[ln3]|I've run out of locations to talk about.
 [s11]|[ln4]|Is there any place around here you could point me to?
-[s11]|[tn1]|This is amazing.
-[s11]|[tn2]|You have truly saved my livlihood.
+[s11]|[tn1]|Oh, a rodeo's in town, of course!
+[s11]|[tn2]|This is amazing.
+[s11]|[tn3]|You have truly saved my livlihood.
 [s11]|[dn1]|Not that one.
-[s11]|[dn2]|No, I went to a zoo yesterday
+[s11]|[dn2]|No, I went to a zoo yesterday.
+
+[s12]|[ln1]|hello, im an artist
+[s12]|[ln2]|i've run out of inspiration for my art, though
+[s12]|[ln3]|do you have any ideas?
+[s12]|[tn1]|the ocean..
+[s12]|[tn2]|truly one of the most majestic places on earth
+[s12]|[tn3]|i'll get right to it, thanks!
+[s12]|[dn1]|been there, done that
+[s12]|[dn2]|My art is not a copy.
