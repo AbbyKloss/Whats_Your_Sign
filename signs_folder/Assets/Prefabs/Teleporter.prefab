@@ -75,3 +75,4 @@ MonoBehaviour:
   mode: 0
   xPlayerPos: 0
   yPlayerPos: 0
+  DoorOpen: {fileID: 8300000, guid: a36ee6353db3ebe41ab467cd756f3815, type: 3}

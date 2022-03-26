@@ -21,7 +21,7 @@
 # Tom Scott   | 11
 # Hokusai     | 12
 # Store Clerk | 13
-# Office Sec. | 14
+# Hotel Sec.  | 14
 
 
 # Placeholder
@@ -35,7 +35,7 @@
 [s0]|[dn2]|HATE VIRGIN
 
 [p0]|[sp1]|Talking to myself again
-[p0]|[sp1]|Wait until Cathy hears about this one
+[p0]|[sp1]|Wait until Claire hears about this one
 [p0]|[dp1]|I should get closer to who I'm giving this to
 [p0]|[dp2]|Not sure the ground wants this talisman
 
@@ -44,24 +44,51 @@
 [b0]|[tp3]|humorous hexahedron
 [b0]|[tp4]|there are only so many words for this
 
-# Placeholder
-[s1]|[ln1]|let'splay
-[s1]|[tn1]|you tube
-[s1]|[tn2]|funfunfun
-[s1]|[dn1]|gungungun
-[s1]|[dn2]|i hate being killed by 12 year olds in games
+[b1]|[tp1]|rodeo's in town
+[b1]|[tp2]|never been to one, i wonder what they're like
+[b1]|[tp3]|maybe i'll get Claire to take me to this one
 
-# Placeholder
-[s2]|[ln1]|gungungun
-[s2]|[tn1]|gungungun
-[s2]|[tn2]|funfunfun
-[s1]|[dn1]|gungungun
-[s2]|[dn2]|IM NOT ANGRY YOU"RE AGNREY
+[b2]|[tp1]|seafood
+[b2]|[tp2]|see-food
+[b2]|[tp3]|C-food
+[b2]|[tp4]|C++-food?
+[b2]|[tp5]|i hope it gets a better grade than that
+
+[s1]|[ln1]|hey gamer!
+[s1]|[ln2]|i've got another stream tonight, you should tune in
+[s1]|[ln3]|but im getting discouraged after just 10 viewers every night
+[s1]|[ln4]|i've been at it for a week already, i should have more by now!
+[s1]|[lp5]|(oh boy, this guy doesn't actually know what he got into)
+[s1]|[lp5]|i'll uh. see how i can help!
+[s1]|[tn1]|that's a perfect idea!
+[s1]|[tn2]|i'll do a collab with one of the million other streamers who look like me!
+[s1]|[tn3]|follow me at twitch.tv/......
+[s1]|[dn1]|i don't think that'll get me in the top 100
+[s1]|[dn2]|no, i hate being killed by 12 year olds in games
+
+[s2]|[ln1]|Hey, i want your thoughts on something.
+[s2]|[lp2]|alright, what's up?
+[s2]|[ln3]|Do you think this neighborhood's going down the drain?
+[s2]|[lp4]|i uh. not really
+[s2]|[lp5]|i've lived here for a few years and it's always been nice
+[s2]|[ln6]|Yet another person with the wrong opinion.
+[s2]|[ln7]|Anyways, I think I'm going to need a way to defend myself.
+[s2]|[ln8]|Do you have any ideas?
+[s2]|[tn1]|The archer? So I need to pick up archery?
+[s2]|[tn2]|Oooh no, that's not it.
+[s2]|[tn3]|I need to get a gun!
+[s2]|[tn4]|My papa always suggested i went with the Glock 29-....
+[s2]|[tp5]|(this lady really just heard what she wanted to)
+[s2]|[tn6]|I'll call him right now!
+[s2]|[dn1]|I dont think that will protect me against the common rabble.
+[s2]|[dn2]|Excuse you, I don't have an anger problem.
 
 [s3]|[ln1]|im picking up cat food
 [s3]|[ln2]|because my cat ran away
 [s3]|[ln3]|he's done this before, but he came back for his favorite food
-[s3]|[ln4]|but they're out of his favorite food today
+[s3]|[ln4]|but they seem to be out of his favorite food today
+[s3]|[lp5]|that's a pickle, but i'll see what i can do
+[s3]|[ln6]|... my cat's name is pickles...
 [s3]|[tn1]|oh! there's the cat food!
 [s3]|[tn2]|i'll keep the card though
 [s3]|[tn3]|my cat thanks you
@@ -69,9 +96,12 @@
 [s3]|[dn2]|i think that will pulverize my cat
 
 [s4]|[ln1]|hey CHUMP
-[s4]|[ln2]|my name's Tortellini, the leader of the Tunnel Snakes
-[s4]|[ln3]|and BOY im peckish
-[s4]|[ln4]|but i can't decide what i wanna eat
+[s4]|[lp2]|m-me?
+[s4]|[ln3]|yeah, you
+[s4]|[ln4]|my name's Tortellini, the leader of the Tunnel Snakes
+[s4]|[ln5]|and BOY im peckish
+[s4]|[ln6]|but i can't decide what i wanna eat
+[s4]|[lp7]|i'll go see what i can do!
 [s4]|[tn1]|you're right
 [s4]|[tn2]|i AM standing right next to a seafood joint
 [s4]|[dn1]|not feeling like eating THAT one
@@ -79,9 +109,12 @@
 
 [s5]|[ln1]|DAN FLASHES HAD A SALE YESTERDAY
 [s5]|[ln2]|BUT THE CRAB SHIRT I WAS EYEING GOT STOLEN
-[s5]|[ln3]|THIS ONE WAS $350 BECAUSE OF THE PATTERNS
-[s5]|[ln4]|BUT IT GOT SOLD OUT SO I'LL NEVER SEE IT AGAIN
-[s5]|[ln5]|YOU GOTTA HELP ME GET ONE
+[s5]|[ln3]|IT WAS $350 BECAUSE OF THE COMPLICATED PATTERNS
+[s5]|[lp4]|(this man has some ENERGY)
+[s5]|[lp5]|(honestly a little exhausting)
+[s5]|[ln6]|BUT IT GOT SOLD OUT SO I'LL NEVER SEE IT AGAIN
+[s5]|[ln7]|YOU GOTTA HELP ME GET ONE
+[s5]|[lp8]|i'll go... figure something out
 [s5]|[tn1]|YOU'RE ABSOLUTELY RIGHT
 [s5]|[tn2]|THEY CAN JUST MAKE ANOTHER CRAB SHIRT
 [s5]|[tn3]|DAN FLASHES CAN JUST USE THE SAME IDEAS
@@ -102,9 +135,12 @@
 
 [s7]|[ln1]|hey.
 [s7]|[ln2]|care to lend an ear to my woes?
-[s7]|[ln3]|i have a flight tonight but i just can't go
-[s7]|[ln4]|those customers. oh god they have so much rage
-[s7]|[ln5]|i think god's grace has left me
+[s7]|[lp3]|of course!
+[s7]|[ln4]|i have a flight tonight but i just can't go
+[s7]|[ln5]|those customers. oh god they have so much rage
+[s7]|[ln6]|i think god's grace has left me
+[s7]|[lp7]|(YIKES)
+[s7]|[lp7]|hahahaha i'll go come up with something
 [s7]|[tn1]|you're right
 [s7]|[tn2]|i must use the goat to contact the true lord
 [s7]|[dn1]|that will not bring me salvation
@@ -115,6 +151,8 @@
 [s8]|[ln3]|but they're becoming a problem
 [s8]|[ln4]|they're all turning into goats
 [s8]|[ln5]|please help.
+[s8]|[lp6]|(why does this feel more like my expertise than other problems?)
+[s8]|[lp7]|i'll go figure something out, sit tight!
 [s8]|[tn1]|YOUVE SAVED RAM RANCH!!!!
 [s8]|[tn2]|I JUST NEEDED MORE RAMS!!!!!!
 [s8]|[dn1]|no.
@@ -124,6 +162,8 @@
 [s9]|[ln2]|it's really hard to tell what, though
 [s9]|[ln3]|you know what, i'll ask you
 [s9]|[ln4]|you have any ideas what it could be?
+[s9]|[lp5]|i'll go poke around and find out
+[s9]|[ln6]|dont poke my patients
 [s9]|[tn1]|...a scorpion?
 [s9]|[tn2]|you've actually been helpful, thank you
 [s9]|[dn1]|that's the dumbest idea i've ever heard
@@ -142,9 +182,11 @@
 [s10]|[dn2]|...are you saying i should lose weight?
 
 [s11]|[ln1]|Hello there!
+[s11]|[lp2]|hi!
 [s11]|[ln2]|I run a travel blog, but I've got a problem.
 [s11]|[ln3]|I've run out of locations to talk about.
 [s11]|[ln4]|Is there any place around here you could point me to?
+[s11]|[lp5]|i'll go ask around, see what's happening
 [s11]|[tn1]|Oh, a rodeo's in town, of course!
 [s11]|[tn2]|This is amazing.
 [s11]|[tn3]|You have truly saved my livlihood.
@@ -152,10 +194,29 @@
 [s11]|[dn2]|No, I went to a zoo yesterday.
 
 [s12]|[ln1]|hello, im an artist
-[s12]|[ln2]|i've run out of inspiration for my art, though
-[s12]|[ln3]|do you have any ideas?
+[s12]|[lp2]|hello, im an oracle
+[s12]|[ln3]|i've run out of inspiration for my art, though
+[s12]|[ln4]|do you have any ideas?
+[s12]|[lp5]|there's gotta be something big you haven't painted yet
+[s12]|[lp6]|i'll sea what i've got
 [s12]|[tn1]|the ocean..
 [s12]|[tn2]|truly one of the most majestic places on earth
 [s12]|[tn3]|i'll get right to it, thanks!
 [s12]|[dn1]|been there, done that
 [s12]|[dn2]|My art is not a copy.
+
+[s13]|[ln1]|you here to buy something?
+[s13]|[ln2]|...
+[s13]|[ln3]|the seafood place is next door, you know
+[s13]|[tn1]|***if you see this, something went wrong***
+[s13]|[dn1]|no no, i sell YOU things here
+[s13]|[dn2]|cat food? oh yeah, we moved that a shelf down
+
+[s14]|[ln1]|Hello, how can I help you?
+[s14]|[ln2]|.
+[s14]|[ln2]|..
+[s14]|[ln2]|...
+[s14]|[ln3]|if you're here to complain about the off-center doors, please leave
+[s14]|[tn1]|***if you see this, something went wrong***
+[s14]|[dn1]|Oh no, I couldn't take this.
+[s14]|[dn2]|Oh no, I couldn't take this.

@@ -67,6 +67,7 @@ public class InventorySlot : MonoBehaviour
     }
 
    public void updateDescriptor() {
+      if (item == null) return;
       string temp = "";
       switch (item.name) {
          case "Talisman1":

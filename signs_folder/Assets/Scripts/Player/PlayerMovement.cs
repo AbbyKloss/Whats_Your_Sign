@@ -7,26 +7,28 @@ public class PlayerMovement : MonoBehaviour
 {
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private GameObject textbox;
+	[SerializeField] private Animator animator;
 
 	private Rigidbody2D m_Rigidbody2D;
 	public bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
-	// public Animator animator;
-
-	// [Header("Events")] // still unsure exactly what this is
-	// [Space]            // i never finished the tutorial, i got what i needed and ran
 
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 	}
 
+	// private void Update() {
+	// 	animator.SetFloat("Speed", m_Rigidbody2D.velocity.magnitude);
+	// }
+
 
 	public void Move(float horizMov, float vertiMov) { // significantly simpler than in game 2
         // Move the character by finding the target velocity
         Vector3 targetVelocity = new Vector2(horizMov * 10f, vertiMov * 10f);
         // And then smoothing it out and applying it to the character
-        m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);        
+        m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+		animator.SetFloat("Speed", m_Rigidbody2D.velocity.magnitude);   
 
         // If the input is moving the player right and the player is facing left...
         if (horizMov > 0 && !m_FacingRight)

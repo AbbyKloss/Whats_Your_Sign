@@ -72,10 +72,11 @@ public class PlayerSpeaking : MonoBehaviour
 
     // for thoughts around certain objects, probably
     // we're thinking ahead, but not _too_ far ahead
-    public void customLine(string input) {
+    public void customLine(string input, bool clearLine = false) {
         textbox.text = input;
         Debug.Log("Speaking: " + input);
-        // StartCoroutine(clearText());
+        if (clearLine)
+            StartCoroutine(clearText());
     }
 
     public void clearBox() {

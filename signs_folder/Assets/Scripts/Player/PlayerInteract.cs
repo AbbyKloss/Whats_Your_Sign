@@ -10,8 +10,7 @@ public class PlayerInteract : MonoBehaviour
     private GameObject[] NPCPoints;
     public Transform closestBlock;
     private GameObject[] ThinkPoints;
-
-    private bool paused;
+    
     public bool talkCheck;
     public bool pastTalkCheck;
     public bool thinkCheck;
@@ -20,10 +19,14 @@ public class PlayerInteract : MonoBehaviour
 
     [SerializeField] private TextMeshPro textbox;
     private PlayerSpeaking selfSpeak;
+    private AudioSource AC;
+    [SerializeField] AudioClip Accepted;
+    [SerializeField] AudioClip Deny;
 
     [SerializeField] private float chatDist = 10f;
-
-    public int numGiven = 0;
+    public GameObject canvas;
+    private bool paused;
+    
 
     // public GameObject SoundGuy;
     // public audio AC;
@@ -35,6 +38,7 @@ public class PlayerInteract : MonoBehaviour
         ThinkPoints= GameObject.FindGameObjectsWithTag("Thinkable");
         selfSpeak = GetComponent<PlayerSpeaking>();
         paused = false; // temp until i implement a pause menu
+        AC = GameObject.Find("SoundGuy").GetComponent<AudioSource>();
 
         // SoundGuy = GameObject.Find("SoundGuy");
         // AC = SoundGuy.GetComponent<audio>();
@@ -43,7 +47,8 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // paused = (canvas.GetComponent<PauseMenu>().pubPaused);
+        paused = (canvas.GetComponent<PauseMenu>().pubPaused);
+        if (paused) return;
         closestTalk = GetClosestNPC(NPCPoints);
         closestBlock = GetClosestNPC(ThinkPoints);
         chatting = GetComponent<PlayerController>().talkButton;
@@ -116,8 +121,12 @@ public class PlayerInteract : MonoBehaviour
             return false;
         }
         bool fulfilled = closestTalk.GetComponent<NPCTakeItem>().take(item);
-        if (fulfilled)
-            numGiven++;
+        if (fulfilled) {
+            AC.PlayOneShot(Accepted);
+        }
+        else {
+            AC.PlayOneShot(Deny);
+        }
         return fulfilled;
     }
 

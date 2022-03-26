@@ -7,7 +7,7 @@ public class InanimateThoughts : MonoBehaviour
 {
     public List<string> lines;
     public TextAsset iFile;
-    private string desiredline = "[b0]";
+    [SerializeField] private string desiredline = "[b0]";
     public bool loopingDialogue = false;
     private int currentLine = 0;
     private string denyLine;
