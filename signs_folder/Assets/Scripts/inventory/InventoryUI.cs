@@ -6,11 +6,13 @@ public class InventoryUI : MonoBehaviour
     Inventory inventory;
 
     InventorySlot[] slots;
+    private AudioSource AC;
+    [SerializeField] AudioClip Click;
     
     void Start() {
         inventory = Inventory.instance;
         inventory.onItemChangedCallback += UpdateUI;
-
+        AC = GameObject.Find("SoundGuy").GetComponent<AudioSource>();
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
@@ -28,12 +30,14 @@ public class InventoryUI : MonoBehaviour
     }
 
     public void imposeLRotate() {
+        AC.PlayOneShot(Click, 0.5f);
         foreach (InventorySlot slot in slots) {
             slot.lRotate();
         }
     }
 
     public void imposeRRotate() {
+        AC.PlayOneShot(Click, 0.5f);
         foreach (InventorySlot slot in slots) {
             slot.rRotate();
         }
